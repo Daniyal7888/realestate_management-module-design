@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+        <!-- Form View -->
+        <record id="view_estate_property_form" model="ir.ui.view">
+            <field name="name">estate.property.type.form</field>
+            <field name="model">estate.property.type</field>
+            <field name="arch" type="xml">
+                <!-- Add your custom fields here if any -->
+                <form>
+                    <sheet>
+                        <!-- Add your existing fields here -->
+                        <notebook>
+                            <page string="Other info">
+                            <field name="name"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_estate_property_tree" model="ir.ui.view">
+            <field name="name">estate.property.type.tree</field>
+            <field name="model">estate.property.type</field>
+            <field name="arch" type="xml">
+                <!-- Add your existing columns here -->
+                <tree>
+                    <field name="name"/>
+                    <!-- Add your existing columns here -->
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_estate_property_search" model="ir.ui.view">
+            <field name="name">estate.property.type.search</field>
+            <field name="model">estate.property.type</field>
+            <field name="arch" type="xml">
+                <search>
+                    <!-- Add your existing filters here -->
+                    <field name="name"/>
+                    <!-- Add your existing filters here -->
+                </search>
+            </field>
+        </record>
+
+<!--        &lt;!&ndash; Action &ndash;&gt;-->
+<!--        <record id="action_estate_property" model="ir.actions.act_window">-->
+<!--            <field name="name">Real Estate Properties</field>-->
+<!--            <field name="res_model">estate.property.type</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--        </record>-->
+
+        <!-- Menu -->
+
+
+</odoo>

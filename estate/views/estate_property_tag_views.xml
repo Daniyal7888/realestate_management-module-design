@@ -1,0 +1,41 @@
+<odoo>
+    <odoo>
+    <data>
+        <record id="view_estate_property_tag_form" model="ir.ui.view">
+            <field name="name">estate.property.tag.form</field>
+            <field name="model">estate.property.tag</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_estate_property_tag_tree" model="ir.ui.view">
+            <field name="name">estate.property.tag.tree</field>
+            <field name="model">estate.property.tag</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+        <!-- Add the menu items -->
+<!--        <menuitem id="menu_property_tags" name="Property Tags" parent="estate.menu_property_root" sequence="1"/>-->
+<!--        <menuitem id="menu_property_tag_list" name="Property Tag List" parent="menu_property_tags" action="action_property_tag_list"/>-->
+
+        <!-- Add the action for the Property Tag list view -->
+        <record id="action_property_tag_list" model="ir.actions.act_window">
+            <field name="name">Property Tags</field>
+            <field name="res_model">estate.property.tag</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+</odoo>
